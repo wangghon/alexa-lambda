@@ -8,12 +8,12 @@
   "scripts": {
     "lint": "node_modules/eslint/bin/eslint.js src *.js",
     "build:clean": "rm -Rf bin/",
-    "transpile": "npm run lint && npm run build:clean && babel --presets es2015 src --out-dir bin",
+    "transpile": "npm run build:clean && babel --presets es2015 src --out-dir bin",
     "test-remote": "./scripts/test-remote.sh",
     "publish": "./scripts/publish-lambda.sh",
     "create": "npm install && npm run transpile && ./scripts/create-lambda.sh",
     "update-code": "npm install && npm run transpile && ./scripts/update-lambda.sh",
-    "log-streams": "aws logs describe-log-streams --log-group-name /aws/lambda/media_phantom_readsqs_lambda --order-by LastEventTime",
+    "log-streams": "aws logs describe-log-streams --log-group-name /aws/lambda/letterbox --order-by LastEventTime",
     "latest-log": "./scripts/latest-log.sh"
   },
   "repository": {
@@ -43,5 +43,10 @@
     "eslint-plugin-react": "^7.2.0",
     "eslint-plugin-standard": "^3.0.1"
   },
-  "homepage": "https://github.com/wangghon/alexa-lambda#readme"
+  "homepage": "https://github.com/wangghon/alexa-lambda#readme",
+  "dependencies": {
+    "request": "^2.81.0",
+    "url": "^0.11.0",
+    "xml2js": "^0.4.18"
+  }
 }

@@ -1,8 +1,8 @@
 #!/bin/sh
 
 
-FUNCTION_FILE=build/alexa_lambda.zip
-FUNCTION_NAME=alexa_lambda
+FUNCTION_FILE=build/letterbox.zip
+FUNCTION_NAME=letterbox
 
 rm -Rf build/
 mkdir build

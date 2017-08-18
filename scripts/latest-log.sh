@@ -1,5 +1,5 @@
 #!/bin/sh
-FUNCTION_NAME=alexa_lambda
+FUNCTION_NAME=letterbox
 
 OUTPUT=$(aws logs describe-log-streams \
 --log-group-name /aws/lambda/$FUNCTION_NAME \

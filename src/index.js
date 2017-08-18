@@ -1,5 +1,4 @@
 
-
 const alexaLambda = require('./alexa-lambda').alexaLambda;
 
 exports.handler = (event, context, callback) => {
